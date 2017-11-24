@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <form (submit)="submit($event)">
+      <div class="row">
+        <div class="col-md-1">
+          <div class="form-group">
+            <label for="lat">Latitud</label>
+            <input type="number" name="lat" id="lat" class="form-control" [(ngModel)]="lat" required>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="form-group">
+            <label for="lon">Longitud</label>
+            <input type="number" name="lon" id="lon" class="form-control" [(ngModel)]="lon" required>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <label>&nbsp;</label>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-12">
+    <h4>Resultado</h4>
+    {{result | json}}
+  </div>
+</div>
